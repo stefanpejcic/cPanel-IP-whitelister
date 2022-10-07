@@ -14,7 +14,7 @@ if [[ $1 == 'init' ]] ; then
  touch /etc/ip_whitelist/sitelist
  chmod -R 700 /etc/ip_whitelist
  echo "*/2 * * * * root ip_whitelist" >> /etc/crontab
- installlocation=/root/ip_whitelist.tgz
+ installlocation=/root/cPanel-IP-whitelister-master/ip_whitelist.tgz
  pluginlocation=/usr/local/cpanel/base/frontend/paper_lantern/
  pluginhome=/usr/local/cpanel/base/frontend/paper_lantern/ip_whitelist
  scriptlocation=/usr/local/cpanel/base/frontend/paper_lantern/ip_whitelist/ip_whitelist
@@ -26,10 +26,10 @@ if [[ $1 == 'init' ]] ; then
  echo "downloading index.live.php"
  cd $pluginhome
  #this can be manual
- cp /root/index.live.php $pluginhome/index.live.php
+ cp /root/cPanel-IP-whitelister-master/index.live.php $pluginhome/index.live.php
  #copy script to /usr/bin and chmod it
  echo "installing whitelist script"
- cat /root/ip_whitelist > /usr/bin/ip_whitelist
+ cat/root/cPanel-IP-whitelister-master/ip_whitelist > /usr/bin/ip_whitelist
  chmod 700 /usr/bin/ip_whitelist
  cd /root
  echo "Cleaning up"
